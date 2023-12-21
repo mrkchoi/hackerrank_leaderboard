@@ -2,6 +2,9 @@
 
 Submitting via personal github due to issues with pushing changes to Hackerrank.
 
+By Kenneth Choi (kennethichoi@gmail.com)
+
+
 
 ### All unit tests passing: ###
 
