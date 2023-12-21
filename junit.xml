@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="3.264">
+  <testsuite name="LeaderBoard" errors="0" failures="0" skipped="0" timestamp="2023-12-21T00:02:32" time="2.075" tests="6">
+    <testcase classname="LeaderBoard should render the table and buttons" name="LeaderBoard should render the table and buttons" time="0.081">
+    </testcase>
+    <testcase classname="LeaderBoard should Navigate to Correct Route on button click" name="LeaderBoard should Navigate to Correct Route on button click" time="0.066">
+    </testcase>
+    <testcase classname="LeaderBoard should Sort by Rank" name="LeaderBoard should Sort by Rank" time="0.055">
+    </testcase>
+    <testcase classname="LeaderBoard should Sort by Name" name="LeaderBoard should Sort by Name" time="0.042">
+    </testcase>
+    <testcase classname="LeaderBoard should Sort by Points" name="LeaderBoard should Sort by Points" time="0.041">
+    </testcase>
+    <testcase classname="LeaderBoard should Sort by Age" name="LeaderBoard should Sort by Age" time="0.042">
+    </testcase>
+  </testsuite>
+</testsuites>
