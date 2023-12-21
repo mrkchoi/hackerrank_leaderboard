@@ -101,5 +101,4 @@ function LeaderBoard(props) {
     </div>
   );
 }
-
 export default LeaderBoard;
