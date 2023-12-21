@@ -16,7 +16,6 @@ function LeaderBoard() {
 
   const sortedData = useMemo(() => {
     if (!sortKey) return data;
-
     return data.sort((a, b) => {
       switch (sortKey) {
         case SORTKEY.RANK:
