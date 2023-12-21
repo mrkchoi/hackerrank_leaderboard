@@ -10,7 +10,7 @@ const SORTKEY = {
   AGE: 'age',
 };
 
-function LeaderBoard(props) {
+function LeaderBoard() {
   const data = response['list'];
   const { sortKey } = useParams();
 
@@ -18,26 +18,27 @@ function LeaderBoard(props) {
     if (!sortKey) return data;
 
     return data.sort((a, b) => {
-      if (sortKey === SORTKEY.RANK) {
-        if (Number(a.rank) < Number(b.rank)) return -1;
-        return 1;
-      } else if (sortKey === SORTKEY.NAME) {
-        if (a.name < b.name) return -1;
-        return 1;
-      } else if (sortKey === SORTKEY.POINTS) {
-        if (Number(a.points) < Number(b.points)) return -1;
-        return 1;
-      } else if (sortKey === SORTKEY.AGE) {
-        if (Number(a.age) < Number(b.age)) {
-          return -1;
-        } else if (Number(a.age) > Number(b.age)) {
-          return 1;
-        } else {
+      switch (sortKey) {
+        case SORTKEY.RANK:
           if (Number(a.rank) < Number(b.rank)) return -1;
           return 1;
-        }
-      } else {
-        return -1;
+        case SORTKEY.NAME:
+          if (a.name < b.name) return -1;
+          return 1;
+        case SORTKEY.POINTS:
+          if (Number(a.points) < Number(b.points)) return -1;
+          return 1;
+        case SORTKEY.AGE:
+          if (Number(a.age) < Number(b.age)) {
+            return -1;
+          } else if (Number(a.age) > Number(b.age)) {
+            return 1;
+          } else {
+            if (Number(a.rank) < Number(b.rank)) return -1;
+            return 1;
+          }
+        default:
+          return -1;
       }
     });
   }, [data, sortKey]);
@@ -47,26 +48,38 @@ function LeaderBoard(props) {
       <div>
         <div>
           <Link to="/rank">
-            <button data-testid="route-rank" className="outlined" type="button">
+            <button
+              data-testid="route-rank"
+              className={`${sortKey === SORTKEY.RANK ? 'solid' : 'outlined'}`}
+              type="button"
+            >
               Rank
             </button>
           </Link>
           <Link to="/name">
-            <button data-testid="route-name" className="outlined" type="button">
+            <button
+              data-testid="route-name"
+              className={`${sortKey === SORTKEY.NAME ? 'solid' : 'outlined'}`}
+              type="button"
+            >
               Name
             </button>
           </Link>
           <Link to="/points">
             <button
               data-testid="route-points"
-              className="outlined"
+              className={`${sortKey === SORTKEY.POINTS ? 'solid' : 'outlined'}`}
               type="button"
             >
               Points
             </button>
           </Link>
           <Link to="/age">
-            <button data-testid="route-age" className="outlined" type="button">
+            <button
+              data-testid="route-age"
+              className={`${sortKey === SORTKEY.AGE ? 'solid' : 'outlined'}`}
+              type="button"
+            >
               Age
             </button>
           </Link>
