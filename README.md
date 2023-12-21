@@ -1,4 +1,16 @@
 # React: Leaderboard  
+
+Submitting via personal github due to issues with pushing changes to Hackerrank.
+
+
+### All unit tests passing: ###
+
+<img width="512" alt="Screenshot 2023-12-20 at 4 53 32 PM" src="https://github.com/mrkchoi/hackerrank_leaderboard/assets/40152546/726ffd48-892c-4681-9f29-560265a37597">
+
+
+---------------------------------------------------------------------------------
+
+
 Create a basic sorting-based Single Page Application, as shown below. The HTML skeleton is already in place, but the application is not complete. Application requirements are given below, and the finished application must pass all of the unit tests.
 
 ![image](https://hrcdn.net/s3_pub/istreet-assets/e8l1BsH7q0cRXerreQ7QRg/final_lb.gif)
